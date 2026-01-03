@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDN 1 NYITDAH</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo SDN 1 NYITDAH" />
+
+        <h1>SDN 1 NYITDAH</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Banner Slide-->
+    <section class="banner">
+      <img src="assets/sekolah1.png" alt="Foto Sekolah 1" class="active" />
+      <img src="assets/sekolah2.png" alt="Foto Sekolah 2" />
+      <img src="assets/sekolah3.png" alt="Foto Sekolah 3" />
+    </section>
+
+    <!--Sambutan Kepala Sekolah-->
+    <section class="welcome">
+      <div class="welcome-image">
+        <img src="assets/sambutan.jpg" alt="Kepala Sekolah" />
+      </div>
+      <div class="welcome-text">
+        <h2>Selamat Datang</h2>
+        <p>
+          Selamat datang di website resmi
+          <strong>SDN 1 Nyitdah</strong>. Kami berkomitmen untuk memberikan
+          pendidikan terbaik bagi para siswa dengan dukungan fasilitas modern,
+          tenaga pendidik profesional, dan lingkungan belajar yang kondusif.
+        </p>
+        <p>Kepala Sekolah SDN 1 Nyitdah</p>
+      </div>
+    </section>
+
+    <!--Informasi Sekolah-->
+    <section class="info">
+      <h2>Informasi Sekolah</h2>
+      <div class="info-container">
+        <div class="info-card">
+          <img src="assets/info1.png" alt="Penerimaan Peserta Didik Baru" />
+          <h3>Penerimaan Peserta Didik Baru</h3>
+          <p>
+            Pendaftaran siswa baru tahun ajaran 2025/2026 telah dibuka secara
+            online.
+          </p>
+          <a href="#">Baca Selengkapnya</a>
+        </div>
+        <div class="info-card">
+          <img src="assets/info2.png" alt="Hasil Lomba Matematika" />
+          <h3>Hasil Lomba Matematika</h3>
+          <p>
+            Siswa SDN 1 Nyitdah berhasil meraih juara 1 dalam lomba Matematika
+            tingkat provinsi.
+          </p>
+          <a href="#">Baca Selengkapnya</a>
+        </div>
+        <div class="info-card">
+          <img src="assets/info3.png" alt="Agenda Ujian Nasional" />
+          <h3>Agenda Ujian Nasional</h3>
+          <p>
+            Ujian nasional akan dilaksanakan mulai bulan April 2025. Persiapkan
+            diri dengan baik.
+          </p>
+          <a href="#">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Fasilitas Sekolah-->
+    <section class="facilities">
+      <h2>Fasilitas Sekolah</h2>
+      <div class="facility-container">
+        <div class="facility-card">
+          <img src="assets/fasilitas1.png" alt="Perpustakaan" />
+          <h3>Perpustakaan</h3>
+          <p>Perpustakaan dengan koleksi buku lengkap dan ruang baca nyaman.</p>
+        </div>
+        <div class="facility-card">
+          <img src="assets/fasilitas2.png" alt="Lab Komputer" />
+          <h3>Kantin Sehat</h3>
+          <p>
+            Kantin modern dengan dengan menjaga kesterilan makanan yang sehat.
+          </p>
+        </div>
+        <div class="facility-card">
+          <img src="assets/fasilitas3.png" alt="Lapangan" />
+          <h3>Lapangan Olahraga</h3>
+          <p>Lapangan luas untuk kegiatan olahraga dan ekstrakurikuler.</p>
+        </div>
+        <div class="facility-card">
+          <img src="assets/fasilitas4.png" alt="UKS" />
+          <h3>UKS</h3>
+          <p>Unit Kesehatan Sekolah siap memberikan layanan kesehatan dasar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+      <p>&copy; 2025 SDN 1 NYITDAH – Bali | Kontak: info@sdn1nyitdah.sch.id</p>
+    </footer>
+
+    <!--Script Slideshow-->
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".banner img");
+      const totalSlides = slides.length;
+
+      function showSlide() {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[slideIndex].classList.add("active");
+        slideIndex = (slideIndex + 1) % totalSlides;
+      }
+
+      showSlide();
+      setInterval(showSlide, 5000);
+    </script>
+  </body>
+</html>
